@@ -118,6 +118,16 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
   flex-shrink: 0;
 }
 
+.brand-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.brand-logo--footer {
+  height: 36px;
+}
+
 .nav-links {
   display: flex;
   gap: 36px;
