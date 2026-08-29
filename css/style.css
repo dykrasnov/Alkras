@@ -119,13 +119,13 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
 }
 
 .brand-logo {
-  height: 44px;
+  height: 30px;
   width: auto;
   display: block;
 }
 
 .brand-logo--footer {
-  height: 36px;
+  height: 24px;
 }
 
 .nav-links {
