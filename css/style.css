@@ -560,8 +560,8 @@ textarea { resize: vertical; min-height: 130px; }
 /* ---------- Footer ---------- */
 
 footer {
-  background: var(--color-graphite);
-  color: rgba(255,255,255,0.65);
+  background: #C0161E;
+  color: rgba(255,255,255,0.85);
   padding: 72px 0 32px;
   font-size: 14px;
 }
@@ -571,7 +571,7 @@ footer {
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 48px;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 @media (max-width: 760px) {
@@ -583,7 +583,7 @@ footer {
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
   margin-bottom: 16px;
   font-weight: 500;
 }
