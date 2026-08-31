@@ -168,6 +168,7 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
 }
 
 .nav-links > li:hover > .nav-dropdown { display: block; }
+.site-nav .has-dropdown.is-open > .nav-dropdown { display: block; }
 
 .nav-dropdown a {
   display: block;
@@ -186,7 +187,10 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
   font-size: 9px;
   opacity: 0.55;
   margin-left: 2px;
+  display: inline-block;
+  transition: transform .18s ease;
 }
+.site-nav .has-dropdown.is-open > a::after { transform: rotate(180deg); opacity: 0.9; }
 
 @media (max-width: 760px) {
   .nav-dropdown { display: none !important; }

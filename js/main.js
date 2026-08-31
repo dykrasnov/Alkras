@@ -18,6 +18,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Dropdown nav: click to open, outside-click to close
+  document.querySelectorAll('.site-nav .has-dropdown > a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const li = link.closest('.has-dropdown');
+      const isOpen = li.classList.contains('is-open');
+      document.querySelectorAll('.site-nav .has-dropdown').forEach(el => el.classList.remove('is-open'));
+      if (!isOpen) li.classList.add('is-open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.site-nav .has-dropdown')) {
+      document.querySelectorAll('.site-nav .has-dropdown').forEach(el => el.classList.remove('is-open'));
+    }
+  });
+
   // Lightbox for [data-lightbox] images
   const overlay = document.createElement('div');
   overlay.className = 'lightbox-overlay';
