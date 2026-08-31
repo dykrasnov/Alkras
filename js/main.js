@@ -18,6 +18,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Lightbox for [data-lightbox] images
+  const lightboxTriggers = document.querySelectorAll('[data-lightbox]');
+  if (lightboxTriggers.length) {
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<span class="lightbox-close">&#x2715;</span><img src="" alt="">';
+    document.body.appendChild(overlay);
+    const lbImg = overlay.querySelector('img');
+
+    lightboxTriggers.forEach(img => {
+      img.addEventListener('click', () => {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        overlay.classList.add('is-open');
+      });
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target !== lbImg) overlay.classList.remove('is-open');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') overlay.classList.remove('is-open');
+    });
+  }
+
   // Contact form: no backend yet — placeholder confirmation only.
   const form = document.querySelector('#contact-form');
   if (form) {
