@@ -160,12 +160,25 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
   top: calc(100% + 10px);
   left: -16px;
   background: var(--color-graphite);
-  min-width: 220px;
+  min-width: 260px;
   border-top: 2px solid var(--color-beam);
   box-shadow: 0 8px 28px rgba(0,0,0,0.18);
   z-index: 200;
   border-radius: 0 0 4px 4px;
 }
+
+.nav-dropdown-head {
+  display: block;
+  padding: 13px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff !important;
+  background: rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(255,255,255,0.14) !important;
+  letter-spacing: .01em;
+}
+.nav-dropdown-head::after { content: ' →'; font-size: 11px; opacity: 0.55; margin-left: 4px; }
+.nav-dropdown-head:hover { background: rgba(255,255,255,0.13) !important; }
 
 .nav-links > li:hover > .nav-dropdown { display: block; }
 .site-nav .has-dropdown.is-open > .nav-dropdown { display: block; }
