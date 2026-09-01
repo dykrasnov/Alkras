@@ -15,8 +15,8 @@
     <a href="index.html" class="brand"><img src="assets/images/logo-alkras.png" alt="Alkras" class="brand-logo"></a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li class="has-dropdown"><a href="industrial.html">Industrial</a><div class="nav-dropdown"><a href="industrial.html" class="nav-dropdown-head">Industrial Overview</a><a href="lasers.html">Lasers</a><a href="laser-systems.html">Laser Systems</a><a href="retrofit-integration.html">Retrofit Integration</a><a href="what-we-offer.html">What We Offer</a></div></li>
-      <li class="has-dropdown"><a href="antidrone.html">Anti-Drone</a><div class="nav-dropdown"><a href="antidrone.html" class="nav-dropdown-head">Defense Overview</a><a href="zorka-1000m.html">ZORKA 1000M</a><a href="military-laser.html">Military Laser</a><a href="complete-system.html">Complete System</a></div></li>
+      <li class="has-dropdown"><a href="lasers.html">Industrial</a><div class="nav-dropdown"><a href="lasers.html">Lasers</a><a href="laser-systems.html">Laser Systems</a><a href="retrofit-integration.html">Retrofit Integration</a><a href="what-we-offer.html" aria-current="page">What We Offer</a></div></li>
+      <li class="has-dropdown"><a href="zorka-1000m.html">Anti-Drone</a><div class="nav-dropdown"><a href="zorka-1000m.html">ZORKA 1000M</a><a href="anti-drone-system.html">Anti-Drone System</a></div></li>
       <li><a href="partnerships.html">Partnerships</a></li>
       <li class="has-dropdown"><a href="about.html">About</a><div class="nav-dropdown"><a href="about.html" class="nav-dropdown-head">About Alkras</a><a href="capabilities.html">Capabilities</a><a href="certifications.html">Certifications &amp; Patents</a></div></li>
       <li><a href="contact.html">Contact</a></li>
@@ -26,56 +26,94 @@
 </nav>
 
 <header class="hero">
-  <img class="hero-media" src="assets/images/hero-industrial.jpg" alt="Industrial laser cutting" style="object-fit:cover; width:100%; height:100%; position:absolute; top:0; left:0;">
+  <img class="hero-media" src="assets/images/hero-industrial.jpg" alt="Alkras laser systems" style="object-fit:cover; width:100%; height:100%; position:absolute; top:0; left:0;">
   <div class="hero-sweep"></div>
   <div class="hero-content">
-    <div class="eyebrow">Industrial — What We Offer</div>
-    <h1>Three ways to work with Alkras on industrial laser systems.</h1>
-    <p class="hero-sub">Whether you need a standalone laser source, a complete production system, or an upgrade to existing equipment — we have the configuration for you.</p>
+    <div class="eyebrow">What We Offer</div>
+    <h1>Everything Alkras builds — industrial and defense.</h1>
+    <p class="hero-sub">A high-level summary of the full product range across precision laser systems for manufacturing and anti-drone defense. Each entry links to detailed specifications.</p>
     <div class="hero-actions">
-      <a href="#what-we-offer" class="btn btn-primary">See Options</a>
-      <a href="contact.html" class="btn btn-ghost">Contact Us</a>
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
     </div>
   </div>
 </header>
 
-<!-- WHAT WE OFFER -->
-<section id="what-we-offer" class="band-dark">
+<!-- INDUSTRIAL OFFERINGS -->
+<section>
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">What We Offer</div>
-      <h2>Three ways to work with Alkras.</h2>
-      <p>Whether you need a standalone laser source, a complete production system, or an upgrade to existing equipment — we have the package for you.</p>
+      <div class="eyebrow">Industrial</div>
+      <h2>Laser systems for cutting and processing.</h2>
     </div>
-    <div class="card-row">
-      <div class="card" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.1);">
-        <div class="card-body" style="padding:28px;">
-          <span class="card-date" style="color:var(--color-accent);">01 — Lasers</span>
-          <h3 style="color:#fff; margin-top:10px;">AL-Series Laser Sources</h3>
-          <p style="font-size:14px; color:rgba(255,255,255,0.65);">Standalone molecular laser generators from 1,200W to 2,000W. For OEMs, integrators, and shops that already have a cutting table and want a superior laser source.</p>
-          <a href="lasers.html" class="btn btn-ghost" style="margin-top:16px; font-size:13px;">View Specifications</a>
+    <div style="display:flex; flex-direction:column; gap:0;">
+
+      <div style="display:grid; grid-template-columns:1fr 2fr auto; gap:32px; align-items:center; padding:28px 0; border-bottom:1px solid var(--color-line);">
+        <div>
+          <p style="font-family:var(--font-mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--color-accent); margin-bottom:6px;">Laser Source</p>
+          <h3 style="font-size:18px; margin:0;">ZORKA 2000</h3>
         </div>
+        <p style="font-size:14px; color:var(--color-ink-soft); margin:0; line-height:1.7;">Standalone molecular CO₂ laser generator, up to 2,000W continuous output. Zero power degradation over its service life. Cuts steel, stainless, aluminum, glass, ceramics, wood, and more. Available in TEM00 (1,200W), TEM01* (1,500W), and "A" mode (2,000W).</p>
+        <a href="lasers.html" style="font-size:13px; color:var(--color-accent); font-weight:600; white-space:nowrap; text-decoration:none;">View Specs →</a>
       </div>
-      <div class="card" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.1);">
-        <div class="card-body" style="padding:28px;">
-          <span class="card-date" style="color:var(--color-accent);">02 — Systems</span>
-          <h3 style="color:#fff; margin-top:10px;">LS-Series Complete Systems</h3>
-          <p style="font-size:14px; color:rgba(255,255,255,0.65);">Turnkey laser cutting machines in 4×8 and 5×10 table formats. Everything included — laser, gantry, RF power supply, chiller, exhaust, and control system.</p>
-          <a href="laser-systems.html" class="btn btn-ghost" style="margin-top:16px; font-size:13px;">View Systems</a>
+
+      <div style="display:grid; grid-template-columns:1fr 2fr auto; gap:32px; align-items:center; padding:28px 0; border-bottom:1px solid var(--color-line);">
+        <div>
+          <p style="font-family:var(--font-mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--color-accent); margin-bottom:6px;">Laser System</p>
+          <h3 style="font-size:18px; margin:0;">MALIBU 1212</h3>
         </div>
+        <p style="font-size:14px; color:var(--color-ink-soft); margin:0; line-height:1.7;">Vertical die board laser cutting system by ANSEAT Lasertechnik (Germany). 300W CO₂ laser, 25–30 m/hr cutting speed, ±0.05mm slot depth accuracy, ±0.01mm positioning precision. Autonomous sheet loading and real-time slot width auto-correction — a capability no competing machine offers.</p>
+        <a href="laser-systems.html" style="font-size:13px; color:var(--color-accent); font-weight:600; white-space:nowrap; text-decoration:none;">View System →</a>
       </div>
-      <div class="card" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.1);">
-        <div class="card-body" style="padding:28px;">
-          <span class="card-date" style="color:var(--color-accent);">03 — Retrofit</span>
-          <h3 style="color:#fff; margin-top:10px;">Retrofit Integration</h3>
-          <p style="font-size:14px; color:rgba(255,255,255,0.65);">Upgrade an existing CNC cutting table with an Alkras laser source. Keep your machine, replace the laser. Engineered and commissioned by our team.</p>
-          <a href="retrofit-integration.html" class="btn btn-ghost" style="margin-top:16px; font-size:13px;">Learn More</a>
+
+      <div style="display:grid; grid-template-columns:1fr 2fr auto; gap:32px; align-items:center; padding:28px 0; border-bottom:1px solid var(--color-line);">
+        <div>
+          <p style="font-family:var(--font-mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--color-accent); margin-bottom:6px;">Retrofit</p>
+          <h3 style="font-size:18px; margin:0;">Laser Retrofit</h3>
         </div>
+        <p style="font-size:14px; color:var(--color-ink-soft); margin:0; line-height:1.7;">Replacement of an aging laser source on an existing CNC cutting table with an Alkras AL-series unit. Keep your gantry, table, chiller, and motion control — replace only the laser. Engineered and commissioned by the Alkras team.</p>
+        <a href="retrofit-integration.html" style="font-size:13px; color:var(--color-accent); font-weight:600; white-space:nowrap; text-decoration:none;">Learn More →</a>
       </div>
+
     </div>
-    <div class="cta-row" style="margin-top:56px;">
+  </div>
+</section>
+
+<!-- DEFENSE OFFERINGS -->
+<section class="band-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Defense</div>
+      <h2>Anti-drone laser systems for field deployment.</h2>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0;">
+
+      <div style="display:grid; grid-template-columns:1fr 2fr auto; gap:32px; align-items:center; padding:28px 0; border-bottom:1px solid rgba(255,255,255,0.08);">
+        <div>
+          <p style="font-family:var(--font-mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--color-accent); margin-bottom:6px;">Laser Module</p>
+          <h3 style="font-size:18px; margin:0; color:#fff;">ZORKA 1000M</h3>
+        </div>
+        <p style="font-size:14px; color:rgba(255,255,255,0.6); margin:0; line-height:1.7;">Compact, field-deployable molecular laser system for UAV neutralization. Physical neutralization at 1,500m, functional effect to 2,000m, 3–5 second engagement time. Available as a standalone module for integration into existing defense infrastructure, C2 systems, or custom mounting platforms.</p>
+        <a href="zorka-1000m.html" style="font-size:13px; color:var(--color-accent); font-weight:600; white-space:nowrap; text-decoration:none;">View Specs →</a>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 2fr auto; gap:32px; align-items:center; padding:28px 0;">
+        <div>
+          <p style="font-family:var(--font-mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--color-accent); margin-bottom:6px;">Complete System</p>
+          <h3 style="font-size:18px; margin:0; color:#fff;">Anti-Drone System</h3>
+        </div>
+        <p style="font-size:14px; color:rgba(255,255,255,0.6); margin:0; line-height:1.7;">The full platform: ZORKA 1000M laser plus electro-optical targeting, precision gimbal turret, and C2 interface. Autonomous or operator-assisted engagement. Alkras offers the complete turnkey system including turret and visual tracking, ready for fixed or mobile ground deployment.</p>
+        <a href="anti-drone-system.html" style="font-size:13px; color:var(--color-accent); font-weight:600; white-space:nowrap; text-decoration:none;">View System →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="band-dark">
+  <div class="wrap">
+    <div class="cta-row">
       <div>
-        <div class="eyebrow">Ready to evaluate the ZORKA platform?</div>
+        <div class="eyebrow">Ready to evaluate?</div>
         <h2>Let's talk about your application.</h2>
       </div>
       <a href="contact.html" class="btn btn-primary">Get in Touch</a>
@@ -93,8 +131,8 @@
       <div>
         <h5>Company</h5>
         <ul>
-          <li class="has-dropdown"><a href="industrial.html">Industrial</a><div class="nav-dropdown"><a href="industrial.html" class="nav-dropdown-head">Industrial Overview</a><a href="lasers.html">Lasers</a><a href="laser-systems.html">Laser Systems</a><a href="retrofit-integration.html">Retrofit Integration</a><a href="what-we-offer.html">What We Offer</a></div></li>
-          <li class="has-dropdown"><a href="antidrone.html">Anti-Drone</a><div class="nav-dropdown"><a href="antidrone.html" class="nav-dropdown-head">Defense Overview</a><a href="zorka-1000m.html">ZORKA 1000M</a><a href="military-laser.html">Military Laser</a><a href="complete-system.html">Complete System</a></div></li>
+          <li class="has-dropdown"><a href="lasers.html">Industrial</a><div class="nav-dropdown"><a href="lasers.html">Lasers</a><a href="laser-systems.html">Laser Systems</a><a href="retrofit-integration.html">Retrofit Integration</a><a href="what-we-offer.html">What We Offer</a></div></li>
+          <li class="has-dropdown"><a href="zorka-1000m.html">Anti-Drone</a><div class="nav-dropdown"><a href="zorka-1000m.html">ZORKA 1000M</a><a href="anti-drone-system.html">Anti-Drone System</a></div></li>
           <li><a href="partnerships.html">Partnerships</a></li>
         </ul>
       </div>
