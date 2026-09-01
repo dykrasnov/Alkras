@@ -159,41 +159,45 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
   position: absolute;
   top: calc(100% + 10px);
   left: -16px;
-  background: var(--color-graphite);
-  min-width: 260px;
-  border-top: 2px solid var(--color-beam);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  background: #0b1825;
+  min-width: 300px;
+  border-top: 3px solid var(--color-beam);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
   z-index: 200;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
 }
 
 .nav-dropdown-head {
-  display: block;
-  padding: 13px 18px;
-  font-size: 13px;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  font-size: 14px;
+  font-weight: 700;
   color: #fff !important;
-  background: rgba(255,255,255,0.07);
-  border-bottom: 1px solid rgba(255,255,255,0.14) !important;
-  letter-spacing: .01em;
+  background: var(--color-beam);
+  border-bottom: none !important;
+  letter-spacing: .02em;
+  text-transform: uppercase;
 }
-.nav-dropdown-head::after { content: ' →'; font-size: 11px; opacity: 0.55; margin-left: 4px; }
-.nav-dropdown-head:hover { background: rgba(255,255,255,0.13) !important; }
+.nav-dropdown-head::after { content: '→'; font-size: 13px; opacity: 0.85; margin-left: 8px; font-weight: 400; }
+.nav-dropdown-head:hover { background: #a8111a !important; color: #fff !important; }
 
 .nav-links > li:hover > .nav-dropdown { display: block; }
 .site-nav .has-dropdown.is-open > .nav-dropdown { display: block; }
 
 .nav-dropdown a {
   display: block;
-  padding: 11px 18px;
+  padding: 13px 20px;
   font-size: 13px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.75);
   border-bottom: 1px solid rgba(255,255,255,0.06);
   border-bottom-color: rgba(255,255,255,0.06) !important;
   white-space: nowrap;
 }
 
-.nav-dropdown a:hover { color: #fff; background: rgba(255,255,255,0.07); }
+.nav-dropdown a:hover { color: #fff; background: rgba(255,255,255,0.06); padding-left: 26px; transition: padding .15s ease; }
 
 .has-dropdown > a::after {
   content: ' ▾';
