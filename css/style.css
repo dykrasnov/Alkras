@@ -15,6 +15,8 @@
   --color-graphite-soft: #8B99A8;
   --color-beam: #D7263D;
   --color-beam-soft: rgba(215, 38, 61, 0.12);
+  --color-accent: #D7263D;
+  --color-ink-muted: #6B7280;
 
   --font-display: 'Space Grotesk', 'Arial Narrow', sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -184,7 +186,6 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
 .nav-dropdown-head::after { content: '→'; font-size: 13px; opacity: 0.85; margin-left: 8px; font-weight: 400; }
 .nav-dropdown-head:hover { background: #a8111a !important; color: #fff !important; }
 
-.nav-links > li:hover > .nav-dropdown { display: block; }
 .site-nav .has-dropdown.is-open > .nav-dropdown { display: block; }
 
 .nav-dropdown a {
@@ -210,7 +211,23 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
 .site-nav .has-dropdown.is-open > a::after { transform: rotate(180deg); opacity: 0.9; }
 
 @media (max-width: 760px) {
-  .nav-dropdown { display: none !important; }
+  .nav-dropdown {
+    position: static;
+    min-width: 0;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    border-top: 2px solid var(--color-beam);
+    margin-top: 8px;
+    top: auto;
+    left: auto;
+  }
+  .nav-dropdown a {
+    font-size: 15px;
+    padding: 12px 20px;
+    white-space: normal;
+    color: rgba(255,255,255,0.8);
+  }
 }
 
 @media (max-width: 760px) {
