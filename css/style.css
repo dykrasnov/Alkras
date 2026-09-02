@@ -647,7 +647,7 @@ textarea { resize: vertical; min-height: 130px; }
 footer {
   background: #C0161E;
   color: rgba(255,255,255,0.85);
-  padding: 72px 0 32px;
+  padding: 48px 0 24px;
   font-size: 14px;
 }
 
@@ -655,7 +655,7 @@ footer {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 40px;
-  padding-bottom: 48px;
+  padding-bottom: 32px;
   border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
