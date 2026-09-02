@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакт | Alkras</title>
+<meta name="description" content="Свяжитесь с Alkras для получения информации о промышленных лазерных системах, антидроновых применениях или технологическом партнёрстве. Мы оперативно отвечаем на серьёзные запросы.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.lang-toggle { display:flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:12px; letter-spacing:.06em; }
+.lang-toggle a { color:rgba(255,255,255,0.45); text-decoration:none; padding:2px 4px; }
+.lang-toggle a[aria-current] { color:#fff; font-weight:600; }
+.lang-toggle span { color:rgba(255,255,255,0.2); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="../assets/images/logo-alkras.png" alt="Alkras" class="brand-logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Главная</a></li>
+      <li class="has-dropdown"><a href="lasers.html">Производство</a><div class="nav-dropdown"><a href="lasers.html">Лазеры</a><a href="laser-systems.html">Лазерные системы</a><a href="retrofit-integration.html">Модернизация</a><a href="what-we-offer.html">Что мы предлагаем</a></div></li>
+      <li class="has-dropdown"><a href="zorka-1000m.html">Антидрон</a><div class="nav-dropdown"><a href="zorka-1000m.html">ZORKA 1000M</a><a href="anti-drone-system.html">Антидрон-система</a></div></li>
+      <li><a href="partnerships.html">Партнёрство</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="contact.html" aria-current="page">Контакт</a></li>
+      <li class="lang-toggle"><a href="../contact.html">EN</a> <span>|</span> <a href="contact.html" aria-current="true">RU</a></li>
+    </ul>
+    <button class="nav-toggle" aria-expanded="false">MENU</button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Контакт</div>
+    <h1>Давайте обсудим, что вы создаёте.</h1>
+    <p>Если вы рассматриваете системы ZORKA для промышленной резки, изучаете антидроновые применения или интересуетесь технологическим партнёрством — свяжитесь с нами напрямую. Мы оперативно отвечаем на серьёзные запросы.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="split" style="align-items:flex-start;">
+      <div>
+        <form id="contact-form">
+          <div class="form-grid">
+            <div>
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+              <label for="email">Электронная почта</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="full">
+              <label for="org">Организация (необязательно)</label>
+              <input type="text" id="org" name="org">
+            </div>
+            <div class="full">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="full">
+              <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+              <p id="form-note" style="margin-top:14px; font-size:13px;"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div>
+        <div class="eyebrow">Прямой контакт</div>
+        <div style="margin-bottom:28px;">
+          <p style="font-size:13px; color:var(--color-ink-muted); margin-bottom:4px; text-transform:uppercase; letter-spacing:.06em;">Alexander Krasnov, основатель</p>
+          <p style="font-size:16px; color:var(--color-ink); margin-bottom:4px;"><a href="mailto:alkrasnovlas@gmail.com" style="color:inherit;">alkrasnovlas@gmail.com</a></p>
+          <p style="font-size:16px; color:var(--color-ink);"><a href="tel:+79355119165" style="color:inherit;">+7 935 511 9165</a></p>
+        </div>
+        <div style="margin-bottom:28px;">
+          <p style="font-size:13px; color:var(--color-ink-muted); margin-bottom:4px; text-transform:uppercase; letter-spacing:.06em;">Daniel Krasnov, инженерия</p>
+          <p style="font-size:16px; color:var(--color-ink); margin-bottom:4px;"><a href="mailto:laser10micron@gmail.com" style="color:inherit;">laser10micron@gmail.com</a></p>
+          <p style="font-size:16px; color:var(--color-ink); margin-bottom:4px;"><a href="tel:+79264761929" style="color:inherit;">+7 926 476 1929</a></p>
+        </div>
+        <div class="eyebrow" style="margin-top:32px;">Расположение</div>
+        <p style="font-size:16px; color:var(--color-ink); margin-bottom:6px;">Москва, Россия</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand"><img src="../assets/images/logo-alkras.png" alt="Alkras" class="brand-logo brand-logo--footer"></div>
+        <p style="max-width:32ch; font-size:14px;">Прецизионная лазерная инженерия для промышленных и специализированных применений.</p>
+      </div>
+      <div>
+        <h5>Компания</h5>
+        <ul>
+          <li class="has-dropdown"><a href="lasers.html">Производство</a><div class="nav-dropdown"><a href="lasers.html">Лазеры</a><a href="laser-systems.html">Лазерные системы</a><a href="retrofit-integration.html">Модернизация</a><a href="what-we-offer.html">Что мы предлагаем</a></div></li>
+          <li class="has-dropdown"><a href="zorka-1000m.html">Антидрон</a><div class="nav-dropdown"><a href="zorka-1000m.html">ZORKA 1000M</a><a href="anti-drone-system.html">Антидрон-система</a></div></li>
+          <li><a href="partnerships.html">Партнёрство</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Связь</h5>
+        <ul>
+          <li><a href="contact.html" aria-current="page">Контакт</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Инфо</h5>
+        <ul>
+          <li><span style="color:rgba(255,255,255,0.4); font-size:13px;">Москва, Россия</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Alkras. Все права защищены.</span>
+      <span>Москва, Россия</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/cookie-consent.js"></script>
+<script src="../js/lang-set.js"></script>
+</body>
+</html>

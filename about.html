@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About | Alkras</title>
+<style>
+.lang-toggle { display:flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:12px; letter-spacing:.06em; }
+.lang-toggle a { color:rgba(255,255,255,0.45); text-decoration:none; padding:2px 4px; }
+.lang-toggle a[aria-current] { color:#fff; font-weight:600; }
+.lang-toggle span { color:rgba(255,255,255,0.2); }
+</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -20,6 +26,7 @@
       <li><a href="partnerships.html">Partnerships</a></li>
       <li><a href="about.html" aria-current="page">About</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li class="lang-toggle"><a href="about.html" aria-current="true">EN</a> <span>|</span> <a href="ru/about.html">RU</a></li>
     </ul>
     <button class="nav-toggle" aria-expanded="false">MENU</button>
   </div>
@@ -255,5 +262,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/cookie-consent.js"></script>
+<script src="js/lang-set.js"></script>
 </body>
 </html>
