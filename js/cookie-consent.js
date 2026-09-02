@@ -1,8 +1,7 @@
 (function () {
   if (localStorage.getItem('alkras-consent')) return;
 
-  var isRu = window.location.pathname.indexOf('/ru/') !== -1 ||
-             window.location.pathname.indexOf('/ru') === window.location.pathname.lastIndexOf('/ru');
+  var isRu = window.location.pathname.indexOf('/ru/') !== -1;
 
   var txt = isRu
     ? 'Этот сайт загружает шрифты через Google Fonts и сохраняет ваш языковой выбор локально. Аналитика и отслеживание в настоящее время не используются.'
