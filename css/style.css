@@ -250,14 +250,21 @@ p { margin: 0 0 1em; color: var(--color-ink-soft); }
     transform: translateY(0);
   }
   .nav-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: 1px solid var(--color-line);
     border-radius: 6px;
     width: 40px;
     height: 40px;
-    font-family: var(--font-mono);
-    font-size: 12px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .nav-toggle-icon {
+    font-size: 18px;
+    line-height: 1;
+    color: var(--color-ink);
   }
 }
 
