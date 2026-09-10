@@ -896,16 +896,22 @@ footer {
 /* ---------- Page hero (interior pages) ---------- */
 
 .page-hero {
-  padding: 64px 0 56px;
+  padding: 36px 0 32px;
   border-bottom: 1px solid var(--color-line);
 }
 
 .page-hero h1 {
-  font-size: clamp(28px, 3.8vw, 46px);
+  font-size: clamp(26px, 3.2vw, 40px);
   max-width: 760px;
 }
 
-.page-hero p { max-width: 52ch; margin-top: 18px; font-size: 17px; }
+.page-hero p { max-width: 52ch; margin-top: 16px; font-size: 16px; line-height: 1.5; }
+
+.page-hero .split {
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: flex-start;
+}
 
 /* Lightbox */
 .lightbox-overlay {
