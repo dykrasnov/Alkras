@@ -13,6 +13,11 @@
 .lang-toggle a { color:var(--color-ink-soft); text-decoration:none; padding:2px 4px; }
 .lang-toggle a[aria-current] { color:var(--color-beam); font-weight:600; }
 .lang-toggle span { color:var(--color-ink-muted); }
+.model-tabs { display:flex; gap:8px; margin-bottom:32px; flex-wrap:wrap; }
+.model-tab { font-family:var(--font-mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase; padding:10px 22px; border:1px solid var(--color-line); background:none; cursor:pointer; color:var(--color-ink-soft); border-radius:2px; }
+.model-tab:hover { border-color:var(--color-beam); }
+.model-tab.active { border-color:var(--color-beam); color:var(--color-beam); font-weight:600; }
+.model-panel[hidden] { display:none; }
 </style>
 </head>
 <body>
@@ -65,139 +70,263 @@
 <!-- SPECS TABLE -->
 <section id="specs">
   <div class="wrap">
-    <h2 style="font-size:clamp(22px,2.6vw,30px); margin-bottom:56px;">Технические характеристики «ZORKA 2000»</h2>
-    <div class="split" style="align-items:start;">
-      <div>
-        <table style="width:100%; border-collapse:collapse; font-size:14px;">
-          <tbody>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Длина волны</td>
-              <td style="padding:10px 0; font-weight:600;">10,6 мкм</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: TEM00</td>
-              <td style="padding:10px 0; font-weight:600;">1 200 Вт</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: TEM01*</td>
-              <td style="padding:10px 0; font-weight:600;">1 500 Вт</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: мода «A»</td>
-              <td style="padding:10px 0; font-weight:600;">2 000 Вт</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Диапазон мощности / стабильность</td>
-              <td style="padding:10px 0; font-weight:600;">5–100% / ±5%</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Диапазон импульсов / скважность</td>
-              <td style="padding:10px 0; font-weight:600;">1–5 000 Гц / 10–100%</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Качество пучка: TEM00</td>
-              <td style="padding:10px 0; font-weight:600;">M² &lt; 1,2 / ⌀15 мм</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Качество пучка: TEM01*</td>
-              <td style="padding:10px 0; font-weight:600;">M² &lt; 1,8 / ⌀18 мм</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Качество пучка: мода «A»</td>
-              <td style="padding:10px 0; font-weight:600;">M² &lt; 2,5 / ⌀20 мм</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Питание</td>
-              <td style="padding:10px 0; font-weight:600;">230 В перем. тока / 3 фазы</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Расход газовой смеси</td>
-              <td style="padding:10px 0; font-weight:600;">10 л/ч</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Охлаждение</td>
-              <td style="padding:10px 0; font-weight:600;">Вода, 20 л/мин при 5 атм</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--color-line);">
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Габариты (Д × Ш × В)</td>
-              <td style="padding:10px 0; font-weight:600;">1,6 × 0,6 × 0,8 м</td>
-            </tr>
-            <tr>
-              <td style="padding:10px 0; color:var(--color-ink-muted);">Масса генератора</td>
-              <td style="padding:10px 0; font-weight:600;">80 кг</td>
-            </tr>
-          </tbody>
-        </table>
-        <div style="margin-top:20px; padding:16px; background:rgba(18,32,46,0.04); border:1px solid var(--color-line); border-radius:2px;">
-          <p style="font-size:13px; color:var(--color-ink-muted); margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em;">Толщина с эталонным качеством кромки</p>
-          <p style="font-size:15px; font-weight:600;">Сталь 12 мм &nbsp;·&nbsp; Нержавейка 6 мм &nbsp;·&nbsp; Алюминий 4 мм</p>
-        </div>
-      </div>
-      <div>
-        <p style="font-family:var(--font-mono); font-size:15px; letter-spacing:.06em; text-transform:uppercase; color:var(--color-ink-soft); margin-bottom:10px;">Компактные габариты лазерного источника (мм)</p>
-        <img src="../assets/images/zorka-dimensions.png" alt="Чертёж ZORKA 2000: 716×676×890 мм, полная длина 1653 мм" style="width:100%; border-radius:2px; border:1px solid var(--color-line); background:#fff; padding:16px; display:block;">
-        <p style="font-size:12px; color:var(--color-ink-soft); line-height:1.5; margin-top:8px;">Площадь основания генератора: 716 × 676 мм, высота 890 мм. Полная длина системы: 1 653 мм. Разработана для прямой интеграции на стандартные промышленные раскройные столы без структурных модификаций.</p>
-        <div style="display:flex; flex-direction:column; gap:24px; border:2px solid #2244CC; border-radius:8px; padding:24px 28px; margin-top:32px;">
+    <div class="model-tabs" role="tablist">
+      <button type="button" class="model-tab active" data-model="2000" aria-selected="true">ZORKA 2000</button>
+      <button type="button" class="model-tab" data-model="4000" aria-selected="false">ZORKA 4000</button>
+      <button type="button" class="model-tab" data-model="6000" aria-selected="false">ZORKA 6000</button>
+    </div>
+
+    <div class="model-panel" data-model="2000">
+      <h2 style="font-size:clamp(22px,2.6vw,30px); margin-bottom:56px;">Технические характеристики «ZORKA 2000»</h2>
+      <div class="split" style="align-items:start;">
         <div>
-          <div class="eyebrow" style="margin-bottom:6px;">«ZORKA 2000» против волоконного лазера (2 кВт)</div>
-          <p style="font-size:13px; color:var(--color-ink-soft); margin-bottom:14px;">Сравнение по показателям, определяющим реальную производительность резки.</p>
-          <table style="width:100%; border-collapse:collapse; font-size:13px;">
-            <thead>
-              <tr>
-                <th style="text-align:left; padding:9px 0; border-bottom:2px solid var(--color-line); color:var(--color-ink-soft); font-weight:500; width:38%;">Показатель</th>
-                <th style="text-align:left; padding:9px 14px; border-bottom:2px solid var(--color-line); color:#C0161E; font-weight:700;">«ZORKA 2000»</th>
-                <th style="text-align:left; padding:9px 0; border-bottom:2px solid var(--color-line); color:var(--color-ink-soft); font-weight:500;">Волоконный лазер (2 кВт)</th>
-              </tr>
-            </thead>
+          <table style="width:100%; border-collapse:collapse; font-size:14px;">
             <tbody>
               <tr style="border-bottom:1px solid var(--color-line);">
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Номинальная мощность</td>
-                <td style="padding:9px 14px; font-weight:600;">2 000 Вт, стабильно</td>
-                <td style="padding:9px 0; color:var(--color-ink-soft);">2 000 Вт, деградирует</td>
+                <td style="padding:10px 0; color:var(--color-ink-muted);">Длина волны</td>
+                <td style="padding:10px 0; font-weight:600;">10,6 мкм</td>
               </tr>
               <tr style="border-bottom:1px solid var(--color-line);">
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Мощность со временем</td>
-                <td style="padding:9px 14px; font-weight:600;">Без деградации</td>
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Снижается при эксплуатации</td>
+                <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: TEM00</td>
+                <td style="padding:10px 0; font-weight:600;">1 200 Вт / M² &lt; 1,2 / ⌀15 мм</td>
               </tr>
               <tr style="border-bottom:1px solid var(--color-line);">
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Скорость резки стали</td>
-                <td style="padding:9px 14px; font-weight:600;">На 10–20% быстрее</td>
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Базовый уровень</td>
+                <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: TEM01*</td>
+                <td style="padding:10px 0; font-weight:600;">1 500 Вт / M² &lt; 1,8 / ⌀18 мм</td>
               </tr>
               <tr style="border-bottom:1px solid var(--color-line);">
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Качество среза нержавейки</td>
-                <td style="padding:9px 14px; font-weight:600;">Зеркально-гладкое</td>
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Грубое при толщине</td>
+                <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: мода «A»</td>
+                <td style="padding:10px 0; font-weight:600;">2 000 Вт / M² &lt; 2,5 / ⌀20 мм</td>
               </tr>
               <tr style="border-bottom:1px solid var(--color-line);">
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Расход N₂</td>
-                <td style="padding:9px 14px; font-weight:600;">Базовый уровень</td>
-                <td style="padding:9px 0; color:var(--color-ink-soft);">В 2 раза больше</td>
+                <td style="padding:10px 0; color:var(--color-ink-muted);">Диапазон мощности / стабильность</td>
+                <td style="padding:10px 0; font-weight:600;">5–100% / ±5%</td>
               </tr>
               <tr style="border-bottom:1px solid var(--color-line);">
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Резка неметаллов</td>
-                <td style="padding:9px 14px; font-weight:600;">Полные возможности</td>
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Невозможно</td>
+                <td style="padding:10px 0; color:var(--color-ink-muted);">Диапазон импульсов / скважность</td>
+                <td style="padding:10px 0; font-weight:600;">1–5 000 Гц / 10–100%</td>
               </tr>
               <tr style="border-bottom:1px solid var(--color-line);">
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Безопасность для глаз</td>
-                <td style="padding:9px 14px; font-weight:600;">Безопасный для глаз спектр</td>
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Опасность для сетчатки</td>
+                <td style="padding:10px 0; color:var(--color-ink-muted);">Питание</td>
+                <td style="padding:10px 0; font-weight:600;">230 В перем. тока / 3 фазы</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--color-line);">
+                <td style="padding:10px 0; color:var(--color-ink-muted);">Расход газовой смеси</td>
+                <td style="padding:10px 0; font-weight:600;">10 л/ч</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--color-line);">
+                <td style="padding:10px 0; color:var(--color-ink-muted);">Охлаждение</td>
+                <td style="padding:10px 0; font-weight:600;">Вода, 20 л/мин при 5 атм</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--color-line);">
+                <td style="padding:10px 0; color:var(--color-ink-muted);">Габариты (Д × Ш × В)</td>
+                <td style="padding:10px 0; font-weight:600;">1,6 × 0,6 × 0,8 м</td>
               </tr>
               <tr>
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Сложность ремонта</td>
-                <td style="padding:9px 14px; font-weight:600;">Простой, недорогой</td>
-                <td style="padding:9px 0; color:var(--color-ink-soft);">Сложный, дорогой</td>
+                <td style="padding:10px 0; color:var(--color-ink-muted);">Масса генератора</td>
+                <td style="padding:10px 0; font-weight:600;">80 кг</td>
               </tr>
             </tbody>
           </table>
+          <div style="margin-top:20px; padding:16px; background:rgba(18,32,46,0.04); border:1px solid var(--color-line); border-radius:2px;">
+            <p style="font-size:13px; color:var(--color-ink-muted); margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em;">Толщина с эталонным качеством кромки</p>
+            <p style="font-size:15px; font-weight:600;">Сталь 12 мм &nbsp;·&nbsp; Нержавейка 6 мм &nbsp;·&nbsp; Алюминий 4 мм</p>
+          </div>
         </div>
+        <div>
+          <p style="font-family:var(--font-mono); font-size:15px; letter-spacing:.06em; text-transform:uppercase; color:var(--color-ink-soft); margin-bottom:10px;">Компактные габариты лазерного источника (мм)</p>
+          <img src="../assets/images/zorka-dimensions.png" alt="Чертёж ZORKA 2000: 716×676×890 мм, полная длина 1653 мм" style="width:100%; border-radius:2px; border:1px solid var(--color-line); background:#fff; padding:16px; display:block;">
+          <p style="font-size:12px; color:var(--color-ink-soft); line-height:1.5; margin-top:8px;">Площадь основания генератора: 716 × 676 мм, высота 890 мм. Полная длина системы: 1 653 мм. Разработана для прямой интеграции на стандартные промышленные раскройные столы без структурных модификаций.</p>
+          <div style="display:flex; flex-direction:column; gap:24px; border:2px solid #2244CC; border-radius:8px; padding:24px 28px; margin-top:32px;">
+          <div>
+            <div class="eyebrow" style="margin-bottom:6px;">«ZORKA 2000» против волоконного лазера (2 кВт)</div>
+            <p style="font-size:13px; color:var(--color-ink-soft); margin-bottom:14px;">Сравнение по показателям, определяющим реальную производительность резки.</p>
+            <table style="width:100%; border-collapse:collapse; font-size:13px;">
+              <thead>
+                <tr>
+                  <th style="text-align:left; padding:9px 0; border-bottom:2px solid var(--color-line); color:var(--color-ink-soft); font-weight:500; width:38%;">Показатель</th>
+                  <th style="text-align:left; padding:9px 14px; border-bottom:2px solid var(--color-line); color:#C0161E; font-weight:700;">«ZORKA 2000»</th>
+                  <th style="text-align:left; padding:9px 0; border-bottom:2px solid var(--color-line); color:var(--color-ink-soft); font-weight:500;">Волоконный лазер (2 кВт)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid var(--color-line);">
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Номинальная мощность</td>
+                  <td style="padding:9px 14px; font-weight:600;">2 000 Вт, стабильно</td>
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">2 000 Вт, деградирует</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--color-line);">
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Мощность со временем</td>
+                  <td style="padding:9px 14px; font-weight:600;">Без деградации</td>
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Снижается при эксплуатации</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--color-line);">
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Скорость резки стали</td>
+                  <td style="padding:9px 14px; font-weight:600;">На 10–20% быстрее</td>
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Базовый уровень</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--color-line);">
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Качество среза нержавейки</td>
+                  <td style="padding:9px 14px; font-weight:600;">Зеркально-гладкое</td>
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Грубое при толщине</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--color-line);">
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Расход N₂</td>
+                  <td style="padding:9px 14px; font-weight:600;">Базовый уровень</td>
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">В 2 раза больше</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--color-line);">
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Резка неметаллов</td>
+                  <td style="padding:9px 14px; font-weight:600;">Полные возможности</td>
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Невозможно</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--color-line);">
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Безопасность для глаз</td>
+                  <td style="padding:9px 14px; font-weight:600;">Безопасный для глаз спектр</td>
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Опасность для сетчатки</td>
+                </tr>
+                <tr>
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Сложность ремонта</td>
+                  <td style="padding:9px 14px; font-weight:600;">Простой, недорогой</td>
+                  <td style="padding:9px 0; color:var(--color-ink-soft);">Сложный, дорогой</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div class="model-panel" data-model="4000" hidden>
+      <h2 style="font-size:clamp(22px,2.6vw,30px); margin-bottom:56px;">Технические характеристики «ZORKA 4000»</h2>
+      <table style="width:100%; max-width:640px; border-collapse:collapse; font-size:14px;">
+        <tbody>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Длина волны</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: TEM00</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: TEM01*</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: мода «A»</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Диапазон мощности / стабильность</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Диапазон импульсов / скважность</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Питание</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Расход газовой смеси</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Охлаждение</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Габариты (Д × Ш × В)</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Масса генератора</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:20px; max-width:640px; padding:16px; background:rgba(18,32,46,0.04); border:1px solid var(--color-line); border-radius:2px;">
+        <p style="font-size:13px; color:var(--color-ink-muted); margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em;">Толщина с эталонным качеством кромки</p>
+        <p style="font-size:15px; font-weight:600;">— &nbsp;·&nbsp; — &nbsp;·&nbsp; —</p>
+      </div>
+    </div>
+
+    <div class="model-panel" data-model="6000" hidden>
+      <h2 style="font-size:clamp(22px,2.6vw,30px); margin-bottom:56px;">Технические характеристики «ZORKA 6000»</h2>
+      <table style="width:100%; max-width:640px; border-collapse:collapse; font-size:14px;">
+        <tbody>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Длина волны</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: TEM00</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: TEM01*</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Выходная мощность: мода «A»</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Диапазон мощности / стабильность</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Диапазон импульсов / скважность</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Питание</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Расход газовой смеси</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Охлаждение</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--color-line);">
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Габариты (Д × Ш × В)</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 0; color:var(--color-ink-muted);">Масса генератора</td>
+            <td style="padding:10px 0; font-weight:600;">—</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:20px; max-width:640px; padding:16px; background:rgba(18,32,46,0.04); border:1px solid var(--color-line); border-radius:2px;">
+        <p style="font-size:13px; color:var(--color-ink-muted); margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em;">Толщина с эталонным качеством кромки</p>
+        <p style="font-size:15px; font-weight:600;">— &nbsp;·&nbsp; — &nbsp;·&nbsp; —</p>
       </div>
     </div>
   </div>
 </section>
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.model-tab');
+  var panels = document.querySelectorAll('.model-panel');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var model = tab.dataset.model;
+      tabs.forEach(function(t){
+        t.classList.toggle('active', t === tab);
+        t.setAttribute('aria-selected', t === tab ? 'true' : 'false');
+      });
+      panels.forEach(function(p){ p.hidden = p.dataset.model !== model; });
+    });
+  });
+})();
+</script>
 
 <!-- PERFORMANCE ADVANTAGE -->
 <section class="band-dark">
